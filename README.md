@@ -1,4 +1,4 @@
-# :zap: React 만든 Text To Speech 예제 파일입니다.
+# 🎙️ React 만든 Text To Speech 예제 파일입니다.
 :octocat: https://light9639.github.io/React-TTS/
 
 ![light9639 github io_React-TTS_](https://user-images.githubusercontent.com/95972251/212852447-75ab10d7-7671-415d-8fad-2c04265ebfd5.png)
@@ -22,7 +22,7 @@ yarn create vite
 
 ## ✒️ App.tsx, getSpeech.ts 수정 및 작성
 ### :zap: App.tsx
-```bash
+```js
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css';
@@ -69,7 +69,7 @@ export default App
 ```
 
 ### :zap: getSpeech.ts
-```bash
+```js
 export const getSpeech = (text: any) => {
   let voices: any[] = [];
 
