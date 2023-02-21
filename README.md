@@ -22,6 +22,7 @@ yarn create vite
 
 ## ✒️ App.tsx, getSpeech.ts 수정 및 작성
 ### :zap: App.tsx
+- `useEffect` 안에 `window.speechSynthesis.getVoices();`를 통해 음성 변환을 할 수 있다.
 ```js
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -69,6 +70,8 @@ export default App
 ```
 
 ### :zap: getSpeech.ts
+- `window.speechSynthesis.getVoices();` 함수를 이용하여 디바이스에 내장된 음성을 가져올 수 있다.
+- `if 조건식`을 이용하여 한국어 음성이 있는지를 확인하여, 한국어가 있다면 음성이 나오게끔 설정한다.
 ```js
 export const getSpeech = (text: any) => {
   let voices: any[] = [];
@@ -91,14 +94,15 @@ export const getSpeech = (text: any) => {
 
     utterThis.lang = lang;
 
-    /* 한국어 vocie 찾기
+    /* 
+      한국어 vocie 찾기
       디바이스 별로 한국어는 ko-KR 또는 ko_KR로 voice가 정의되어 있다.
     */
     const kor_voice = voices.find(
       (elem) => elem.lang === lang || elem.lang === lang.replace("-", "_")
     );
 
-    //힌국어 voice가 있다면 ? utterance에 목소리를 설정한다 : 리턴하여 목소리가 나오지 않도록 한다.
+    // 한국어 voice가 있다면 ? utterance에 목소리를 설정한다 : 리턴하여 목소리가 나오지 않도록 한다.
     if (kor_voice) {
       utterThis.voice = kor_voice;
     } else {
