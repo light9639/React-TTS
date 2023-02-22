@@ -119,3 +119,6 @@ export const getSpeech = (text: any) => {
 
 ## :test_tube: 음성변환 버튼 클릭.
 - 음성 변환 버튼을 클릭하면 웹페이지에서 input 속의 텍스트 내용을 읽어서 음성 변환이 됩니다.
+## 📎 출처
+- <a href="https://joylee-developer.tistory.com/35">Javascript30 - day23 Speech Synthesis</a>
+- <a href="https://sub0709.tistory.com/86">[javascript] 플러그인 없는 Text-To-Speech 만들기</a>
